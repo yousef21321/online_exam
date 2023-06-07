@@ -1,0 +1,19 @@
+html {
+    background: url("../img/rockywall.png")
+}
+body {margin: 2;padding: 4}
+h1 {
+    padding: .1rem 0;margin: 44;
+}
+.title {margin:0;padding:0;color:rgb(51, 71, 100);margin: 0 auto;text-align: center; }
+header {
+    background: url("../img/dark-paths.png");
+}
+
+article {
+    width: 80%;
+    background: rgb(49, 169, 157);
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+

@@ -1,0 +1,38 @@
+table {
+    border: 1px solid #555;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    border: 1px solid rgb(85, 85, 85);
+    padding: .5rem;
+}
+
+th {
+    text-align: right;
+}
+
+caption {
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: .3rem 0;
+    background-color: #9be0e9;
+    text-align: center;
+}
+
+thead,
+tfoot {
+    background: rgb(35, 45, 71);
+    color: rgb(255, 255, 255);
+}
+
+tbody tr:nth-child(even) {
+    background: #ddd;
+}
+
+.flex55 {
+    margin-top: 20px;
+    width: 25%;
+}

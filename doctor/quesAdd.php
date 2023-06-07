@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <title>Doctor Add Exam</title>
+    
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-grad-school.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+
+	</head>
+    <?php
+$filepath = realpath(dirname(__FILE__));
+include_once ($filepath.'/../classes/Exam.php');
+
+$exm = new Exam();
+?>
+<header class="main-header clearfix" role="header">
+    <div class="logo">
+      <a href="#"><em>Add</em>Exam</a>
+    </div>
+    <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
+    <nav id="menu" class="main-nav" role="navigation">
+      <ul class="main-menu">
+        <li><a href="#section1">Home</a></li>
+        <li class="has-submenu"><a href="#section2">About Us</a>
+          <ul class="sub-menu">
+            <li><a href="#section2">Who we are?</a></li>
+            <li><a href="#section3">What we do?</a></li>
+            <li><a href="#section3">How it works?</a></li>
+        </li>
+        <li><a href="#section4">Courses</a></li>
+        <!-- <li><a href="#section5">Video</a></li> -->
+        <li><a href="#section6">Contact</a></li>
+        <li><a href="https://templatemo.com" class="external">External</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  
+  <style>
+      .adminpanel{
+          border: 1px solid #dddddd;
+          border-radius: 12px;
+          color: #999999;
+          margin: 18px auto 0;
+          padding: 15px;
+          width: 650px;
+      }
+      .td{
+        color:gold;
+      }
+  </style>
+    
+    <?php
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+        $addQues = $exm->addQuestions($_POST);
+    }
+     /*get total*/
+     $total = $exm->getTotalRows();
+     $next = $total + 1;
+    ?>
+ <!--------------------------------------------------->
+ <section class="section main-banner" id="top" data-section="section1">
+      <video autoplay muted loop id="bg-video">
+          <source src="assets/images/course-video.mp4" type="video/mp4" />
+      </video>    
+<div class="video-overlay header-text">
+          <div class="caption">
+          <h2 style="text-align: center; font-size: 24px">Add Question</h2>
+
+<?php
+   if(isset($addQues)){
+       echo $addQues;
+   }
+?>
+
+<div class="adminpanel">
+    <form action="" method="post">
+        <table>
+            <tr>
+                <td>Question No</td>
+                <td>:</td>
+                <td><input type="number" value="<?php
+                       if(isset($next)){
+                           echo $next;
+                       }
+                    ?>" name="quesNo"/></td>
+            </tr>
+            <tr>
+                <td>Question</td>
+                <td>:</td>
+                <td><input type="text" name="ques" placeholder="Enter a Question" required=""/></td>
+            </tr>
+            <tr>
+                <td>Choice One</td>
+                <td>:</td>
+                <td><input type="text" name="ans1" placeholder="Enter Choice One..." required=""/></td>
+            </tr>
+            <tr>
+                <td>Choice Two</td>
+                <td>:</td>
+                <td><input type="text" name="ans2" placeholder="Enter Choice Two..." required=""/></td>
+            </tr>
+            <tr>
+                <td>Choice Three</td>
+                <td>:</td>
+                <td><input type="text" name="ans3" placeholder="Enter Choice Three..." required=""/></td>
+            </tr>
+            <tr>
+                <td>Choice Four</td>
+                <td>:</td>
+                <td><input type="text" name="ans4" placeholder="Enter Choice Four..." required=""/></td>
+            </tr>
+            <tr>
+                <td>Correct No</td>
+                <td>:</td>
+                <td><input type="number" name="rightAns" required=""/></td>
+            </tr>
+              
+          </div>
+      </div>
+    <div class="main">
+        
+                    <tr>
+                        <td class="button_class" colspan="3" align="center">
+                            <input style="color: green;" type="submit" value="Add a Question" required=""/>
+                        </td>
+                    </tr>
+
+                </table>
+            </form>
+        </div>
+
+	</section>
+
+    </div>
+<?php include 'inc/footer.php'; ?>

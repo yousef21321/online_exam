@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scheduale</title>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/framework.css" />
+    <link rel="stylesheet" href="css/master.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&#038;display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="page d-flex">
+      <div class="sidebar bg-white p-20 p-relative">
+        <h3 class="p-relative txt-c mt-0">Dr.Ahmed</h3>
+        <ul>
+          </li>
+          <li>
+            <a class="d-flex align-center fs-14 c-black rad-6 p-10" href="DrProfile.html">
+              <i class="fa-solid fa-gear fa-fw"></i>
+              <span>My Profile</span>
+            </a>
+          </li>
+          <li>
+            <a class="d-flex align-center fs-14 c-black rad-6 p-10" href="student-info.html">
+              <i class="fa-regular fa-user fa-fw"></i>
+              <span>Students Info</span>
+            </a>
+          </li>
+          <li>
+            <a class="d-flex align-center fs-14 c-black rad-6 p-10" href="exams.html">
+              <i class="fa-solid fa-graduation-cap fa-fw"></i>
+              <span>Exams</span>
+            </a>
+          </li>
+          <li>
+            <a class="d-flex align-center fs-14 c-black rad-6 p-10" href="view-student.html">
+              <i class="fa-regular fa-circle-user fa-fw"></i>
+              <span>View Students</span>
+            </a>
+          </li>
+          <li>
+            <a class="active d-flex align-center fs-14 c-black rad-6 p-10" href="scheduale.html">
+              <i class="fa-regular fa-credit-card fa-fw"></i>
+              <span>Scheduale Exam</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="content w-full">
+        <!-- Start Head -->
+        <div class="head bg-white p-15 between-flex">
+          <!-- <div class="search p-relative">
+            <input class="p-10" type="search" placeholder="Type A Keyword" />
+          </div> -->
+          <div class="icons d-flex align-center">
+            <span class="notification p-relative">
+              <a href="#"><img src="imgs/Bell (2).jpg" alt=""/></a>
+            </span>
+            <a href="DrProfile.html"><img src="imgs/avatar.png" alt=""/> </a>
+          </div>
+        </div>
+        <!-- End Head -->
+        <h1 class="p-relative">Plans</h1>
+        <div class="plans-page d-grid m-20 gap-20">
+          <div class="plan green bg-white p-20">
+            <div class="top bg-green txt-c p-20">
+              <h2 class="m-0 c-white">MidTerm Scheduale</h2>
+            </div>
+            <ul>
+              <li>
+                <i class="fa-solid fa-check fa-fw yes"></i>
+                <span>System Analysis Course</span>
+                <input class="b-none border-ccc p-10 rad-6 d-block w-full" style="margin-left: 100px; width:40%;" type="date" id="first">
+                <i class="fa-solid fa-circle-info help"></i>
+              </li>
+              <li>
+                <i class="fa-solid fa-check fa-fw yes"></i>
+                <span>Data Structure And Algorithms</span>
+                <input class="b-none border-ccc p-10 rad-6 d-block w-full" style="margin-left: 50px; width:40%;" type="date" id="first">
+                <i class="fa-solid fa-circle-info help"></i>
+              </li>
+              <li>
+                <i class="fa-solid fa-check fa-fw yes"></i>
+                <span>Responsive Web Design</span>
+                <input class="b-none border-ccc p-10 rad-6 d-block w-full" style="margin-left: 100px; width:40%;" type="date" id="first">
+                <i class="fa-solid fa-circle-info help"></i>
+              </li>
+            </ul>
+            <a href="#" class="btn-shape bg-green c-white d-block w-fit">Send</a>
+          </div>
+          <!-- Start Plan -->
+          <div class="plan blue bg-white p-20">
+            <div class="top bg-blue txt-c p-20">
+              <h2 class="m-0 c-white">Final Scheduale</h2>
+            </div>
+            <ul class="list-none p-0">
+              <li>
+                <i class="fa-solid fa-check fa-fw yes"></i>
+                <span>System Analysis Course</span>
+                <input class="b-none border-ccc p-10 rad-6 d-block w-full" style="margin-left: 100px; width:40%;" type="date" id="first">
+                <i class="fa-solid fa-circle-info help"></i>
+              </li>
+              <li>
+                <i class="fa-solid fa-check fa-fw yes"></i>
+                <span>Data Structure And Algorithms</span>
+                <input class="b-none border-ccc p-10 rad-6 d-block w-full" style="margin-left: 50px; width:40%;" type="date" id="first">
+                <i class="fa-solid fa-circle-info help"></i>
+              </li>
+              <li>
+                <i class="fa-solid fa-check fa-fw yes"></i>
+                <span>Responsive Web Design</span>
+                <input class="b-none border-ccc p-10 rad-6 d-block w-full" style="margin-left: 100px; width:40%;" type="date" id="first">
+                <i class="fa-solid fa-circle-info help"></i>
+              </li>
+            </ul>
+            <a href="#" class="btn-shape bg-blue c-white d-block w-fit">Send</a>
+          </div>
+          <!-- End Plan -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
